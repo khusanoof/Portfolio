@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+{% block content %}
+            <!-- left bar -->
+            <div class="mil-left-panel">
+
+                <div class="mil-page-name mil-upper mil-dark">Homepage</div>
+
+                <ul class="mil-social-icons">
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-behance"></i></a></li>
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-dribbble"></i></a></li>
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#." target="_blank" class="social-icon"> <i class="fab fa-github"></i></a></li>
+                </ul>
+
+            </div>
+            <!-- left bar end -->
+
+            <!-- back to top -->
+            <div class="mil-back-to-top">
+                <a href="" class="mil-link mil-btt-icon">
+                    <span>Back to top</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+            <!-- back to top end -->
+
+        </div>
+
+        <!-- content -->
+        <div class="mil-content">
+
+            <div class="mil-scroll-wrapper transition-fade" id="swupMain">
+                <div class="mil-container">
+                    <!-- banner -->
+                    <section class="mil-side-banner mil-center">
+                        <div class="mil-banner-top mil-up"></div>
+                        <div class="mil-banner-title">
+                            <div class="mil-upper mil-dark mil-up mil-mb-30">Hello! My name is</div>
+                            <h1 class="mil-up mil-mb-30">Xusanov<br>Muhammadjon</h1>
+                            <p class="mil-upper mil-dark mil-up"></p>
+                        </div>
+                        <div class="mil-up mil-oval-frame">
+                            <div class="mil-circle-text">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
+                                    <defs>
+                                        <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                                    </defs>
+                                    <circle cx="150" cy="100" r="75" fill="none" />
+                                    <g>
+                                        <use xlink:href="#circlePath" fill="none" />
+                                        <text style="letter-spacing: 6.5px">
+                                            <!-- circle text -->
+                                            <textPath xlink:href="#circlePath">Download-SV - Download-SV-</textPath>
+                                        </text>
+                                    </g>
+                                </svg>
+                                <a href="#about" class="mil-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <polyline points="19 12 12 19 5 12"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- banner end -->
+
+                    <!-- about -->
+                    <section id="about" class="mil-p-0-90">
+                        <div class="mil-oval-frame-2 mil-mb-90">
+                            <img src="{% static 'img/person/avatar.png' %}" alt="avatar">
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="mil-center">
+                                    <h2 class="mil-up mil-mb-30">Hi! My name is Muhammadjon, <br>i’m Backend Developer based in Uzbekistan</h2>
+                                    <div class="mil-quote mil-up mil-mb-30"><i class="fas fa-quote-left"></i></div>
+                                    <p class="mil-up mil-mb-30">I am a passionate and dedicated Backend Developer with a strong focus on building robust and scalable systems. I excel at transforming complex problems into efficient and reliable solutions. With a detail-oriented mindset and a commitment to clean code, I strive to deliver impactful back-end architectures that power seamless user experiences. Let’s collaborate to bring your digital ideas to life!</p>
+                                    <img src="{% static 'img/person/signature.png' %}" alt="signature" class="mil-up mil-sign">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- about end -->                 
+                    <div class="mil-divider mil-up mil-mb-90"></div>
+
+                    <!-- call to action -->
+                    <div class="mil-p-0-90">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="mil-center">
+                                    <h2 class="mil-up mil-mb-30">Ready to bring your ideas to life? I'm here to help</h2>
+                                    <div class="mil-up">
+                                        <a href="{% url 'contact-page' %}" class="mil-btn mil-sm-btn">Contact me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- call to action end -->
+                    {% endblock content %}
