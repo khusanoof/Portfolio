@@ -1,6 +1,7 @@
 from typing import Any
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.contrib import messages
 from .forms import ContactForm
 from .models import Portfolio,Blog
 from django.views.generic.edit import FormView
@@ -21,7 +22,11 @@ class ContactFormView(FormView):
         content = form.cleaned_data.get('content')
         Contact.objects.create(name=name, email=email, content=content)
         text = f"Name: {name}\nEmail: {email}\nText: {content}"
-        send_message(text)
+        try:
+            send_message(text) 
+            messages.success(self.request, "Xabaringiz muvaffaqiyatli yuborildi! Tez orada javob olasiz!")
+        except Exception as e:
+            messages.error(self.request, f"Xabar yuborishda xatolik yuz berdi: {e}")
         return super().form_valid(form)
 
 
